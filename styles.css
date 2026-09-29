@@ -69,6 +69,10 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .answer-note { margin: 0; color: #4b5563; font-size: 24px; font-weight: 800; line-height: 1.3; text-align: right; }
 .question-card.correct .answer-note { color: #087f5b; }
 .question-card.incorrect .answer-note { color: #c62828; }
+.feedback-wrong { color: #c62828; }
+.feedback-label { color: #d97706; }
+.feedback-answer { color: #087f5b; }
+.feedback-correct { color: #087f5b; }
 .question-nav-slot { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; min-height: 0; }
 .question-nav-slot button { min-width: 180px; margin: 0 0 4px; box-shadow: 0 8px 18px rgba(124, 58, 237, .20); }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
