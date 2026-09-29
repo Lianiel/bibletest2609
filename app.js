@@ -115,7 +115,7 @@
     $('correct-count').textContent = correctCount;
     $('wrong-count').textContent = wrongCount;
     $('previous-button').disabled = currentIndex === 0;
-    $('next-button').textContent = '下一題 →';
+    $('next-button').textContent = '下一題';
     $('next-button').classList.toggle('hidden', currentIndex === TEST_SIZE - 1 || !hasAnswer);
     $('submit-button').classList.toggle('hidden', currentIndex !== TEST_SIZE - 1 || !hasAnswer || submitted);
     if (submitted) {
