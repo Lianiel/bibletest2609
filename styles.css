@@ -47,8 +47,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .score-correct, .score-wrong { flex-direction: column; line-height: 1.1; }
 .score-correct { color: #008566; }
 .score-wrong { color: #e11d48; }
-.score-correct span, .score-wrong span { font-size: 30px; }
-.score-correct strong, .score-wrong strong { margin-top: 5px; font-size: 45px; }
+.score-correct span, .score-wrong span { font-size: 15px; }
+.score-correct strong, .score-wrong strong { margin-top: 5px; font-size: 28px; }
 .question-card { margin: 14px 0; padding: 24px; background: linear-gradient(145deg, rgba(255,255,255,.97), rgba(235,229,255,.94) 58%, rgba(226,248,255,.92)); }
 .question-card h2 { margin: 0 0 22px; font-size: clamp(21px, 3vw, 30px); line-height: 1.55; letter-spacing: .01em; }
 .option { display: flex; align-items: flex-start; min-height: 70px; padding: 18px 16px; margin: 0; border: 2px solid #ddd2f3; border-radius: 18px; cursor: pointer; line-height: 1.55; font-size: 18px; background: linear-gradient(135deg, #fff, #faf7ff); transition: transform .15s ease, border-color .15s ease, background .15s ease; }
@@ -111,8 +111,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   .progress-block span { font-size: 18px; }
   .progress-block strong { font-size: 32px; }
   .score-block { gap: 18px; }
-  .score-correct span, .score-wrong span { font-size: 33px; }
-  .score-correct strong, .score-wrong strong { font-size: 49px; }
+  .score-correct span, .score-wrong span { font-size: 18px; }
+  .score-correct strong, .score-wrong strong { font-size: 32px; }
   .question-card { margin: 5px 0; padding: 7px 6px; border-radius: 12px; }
   .question-card h2 { margin-bottom: 7px; font-size: 32px; line-height: 1.38; }
   .option { min-height: 58px; padding: 8px 7px; border-radius: 10px; font-size: 27px; line-height: 1.38; }
