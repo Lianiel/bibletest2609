@@ -152,9 +152,7 @@
   }
 
   function refreshStats() {
-    const state = readState();
-    $('bank-count').textContent = BANK_SIZE;
-    $('used-count').textContent = state.usedIds.length;
+    readState();
   }
 
   function setupLineBrowserPrompt() {

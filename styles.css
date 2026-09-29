@@ -66,10 +66,11 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   .app-shell { padding: 0 2px 20px; }
   .hero { padding: 4px 2px 2px; }
   .eyebrow { font-size: 27px; line-height: 1.2; margin-bottom: 2px; }
-  h1 { font-size: clamp(42px, 8vw, 52px); line-height: 1.08; }
+  h1 { font-size: clamp(32px, 8vw, 42px); line-height: 1.08; }
   .panel { padding: 6px; border-radius: 14px; }
-  .stats { gap: 4px; margin-bottom: 6px; }
+  .stats { grid-template-columns: 1fr; gap: 4px; margin-bottom: 6px; }
   .stats div { padding: 6px 3px; border-radius: 9px; }
+  .stats div { width: min(100%, 260px); margin: 0 auto; }
   .stats strong { font-size: 31px; }
   .stats span { font-size: 22px; }
   .quiz-toolbar { margin: 2px 0 4px; padding: 6px 7px; border-radius: 11px; font-size: 24px; }
