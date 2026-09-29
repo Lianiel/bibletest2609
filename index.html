@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026年9月每日活水聖經複習測驗</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">每日活水聖經複習測驗</p>
+      <h1>2026年9月《列王紀上7～11章》</h1>
+    </header>
+
+    <section id="start-panel" class="panel">
+      <div class="stats">
+        <div><strong id="bank-count">100</strong><span>題母題庫</span></div>
+        <div><strong>50</strong><span>每次題數</span></div>
+        <div><strong id="used-count">0</strong><span>本輪已出題</span></div>
+      </div>
+      <p id="status-message" class="status"></p>
+      <button id="start-button" class="primary-button">開始50題測驗</button>
+      <p class="small-note">測驗進度與輪替紀錄只保存在本機瀏覽器，不會上傳資料。</p>
+    </section>
+
+    <section id="quiz-panel" class="hidden">
+      <div class="quiz-toolbar">
+        <span id="progress-label">第1題／共50題</span>
+        <span id="score-label">尚未交卷</span>
+      </div>
+      <form id="quiz-form"></form>
+      <div class="actions">
+        <button id="previous-button" class="secondary-button" type="button">上一題</button>
+        <button id="next-button" class="primary-button" type="button">下一題</button>
+        <button id="submit-button" class="primary-button hidden" type="button">交卷並查看結果</button>
+        <button id="new-test-button" class="secondary-button hidden" type="button">開始下一次50題</button>
+      </div>
+    </section>
+
+    <section id="result-panel" class="panel hidden">
+      <h2 id="result-title">測驗完成</h2>
+      <p id="result-summary"></p>
+      <div id="result-details"></div>
+    </section>
+  </main>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
