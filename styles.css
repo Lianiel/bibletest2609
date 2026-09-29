@@ -101,7 +101,7 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   #start-panel .stats div { padding: 8px 3px; }
   #start-panel .stats strong { font-size: 28px; }
   #start-panel .stats span { font-size: 18px; }
-  #start-panel .primary-button { flex: 1; width: auto; padding: 12px 10px; font-size: 20px; }
+  #start-panel .primary-button { flex: 1; width: auto; padding: 14px 10px; font-size: 28px; letter-spacing: .03em; }
   .stats { grid-template-columns: 1fr; gap: 4px; margin-bottom: 6px; }
   .stats div { padding: 6px 3px; border-radius: 9px; }
   .stats div { width: min(100%, 260px); margin: 0 auto; }
