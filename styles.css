@@ -40,6 +40,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .question-card.correct { border-color: #75c798; background: #f2fff6; }
 .question-card.incorrect { border-color: #e99b9b; background: #fff6f6; }
 .answer-note { margin: 12px 0 0; color: #4b5563; font-size: 14px; }
+.question-nav-slot { display: flex; min-height: 0; }
+.question-nav-slot button { min-width: 180px; margin: 0 0 4px; box-shadow: 0 8px 18px rgba(124, 58, 237, .20); }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
 .actions button { min-width: 112px; }
 #next-button, #submit-button { min-width: 180px; box-shadow: 0 8px 18px rgba(124, 58, 237, .20); }
@@ -51,6 +53,7 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 @media (min-width: 700px) {
   #quiz-form .question-card { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 28px; }
   #quiz-form .question-card h2, #quiz-form .answer-note { grid-column: 1 / -1; }
+  #quiz-form .question-nav-slot { grid-column: 1 / -1; }
   #quiz-form .option + .option { margin-top: 0; }
 }
 @media (max-width: 620px) {

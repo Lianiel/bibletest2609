@@ -87,7 +87,15 @@
     }).join('');
     const correct = hasAnswer && selectedAnswer === q.answer;
     const feedback = hasAnswer ? `<p class="answer-note">${correct ? '答對' : `答錯；正確答案：${q.answer} ${q.options[q.answer.charCodeAt(0) - 65]}`}</p>` : '';
-    form.innerHTML = `<article class="question-card ${hasAnswer ? (isCorrect ? 'correct' : 'incorrect') : ''}" data-question-id="${q.id}"><h2>${currentIndex + 1}. ${q.question}</h2>${options}${feedback}</article>`;
+    // Keep feedback and navigation immediately above the answer choices, matching
+    // the established mobile quiz layout.
+    $('actions').appendChild($('next-button'));
+    $('actions').appendChild($('submit-button'));
+    form.innerHTML = `<article class="question-card ${hasAnswer ? (isCorrect ? 'correct' : 'incorrect') : ''}" data-question-id="${q.id}"><h2>${currentIndex + 1}. ${q.question}</h2>${feedback}<div class="question-nav-slot"></div>${options}</article>`;
+    const questionCard = form.querySelector('.question-card');
+    const questionNavSlot = questionCard.querySelector('.question-nav-slot');
+    if (hasAnswer && currentIndex < TEST_SIZE - 1 && !submitted) questionNavSlot.appendChild($('next-button'));
+    if (hasAnswer && currentIndex === TEST_SIZE - 1 && !submitted) questionNavSlot.appendChild($('submit-button'));
     form.querySelectorAll('input').forEach((input) => {
       input.addEventListener('change', () => {
         if (!Object.prototype.hasOwnProperty.call(answers, q.id)) {
