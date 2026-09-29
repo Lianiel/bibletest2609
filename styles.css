@@ -63,16 +63,23 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   #quiz-form .option + .option { margin-top: 0; }
 }
 @media (max-width: 620px) {
-  .app-shell { padding: 4px 8px 34px; }
-  .hero { padding: 12px 4px 5px; }
-  .eyebrow { font-size: 19px; margin-bottom: 5px; }
-  h1 { font-size: clamp(34px, 8vw, 44px); line-height: 1.12; }
-  .panel { padding: 16px; }
-  .stats strong { font-size: 23px; }
-  .quiz-toolbar { margin-top: 4px; padding: 13px 14px; font-size: 16px; }
-  .question-card { padding: 18px 14px; border-radius: 20px; }
-  .question-card h2 { margin-bottom: 17px; font-size: 24px; line-height: 1.48; }
-  .option { min-height: 66px; padding: 16px 13px; font-size: 19px; line-height: 1.52; }
-  .answer-note { font-size: 16px; }
-  .actions button { width: 100%; }
+  .app-shell { padding: 0 2px 20px; }
+  .hero { padding: 4px 2px 2px; }
+  .eyebrow { font-size: 27px; line-height: 1.2; margin-bottom: 2px; }
+  h1 { font-size: clamp(42px, 8vw, 52px); line-height: 1.08; }
+  .panel { padding: 6px; border-radius: 14px; }
+  .stats { gap: 4px; margin-bottom: 6px; }
+  .stats div { padding: 6px 3px; border-radius: 9px; }
+  .stats strong { font-size: 31px; }
+  .stats span { font-size: 22px; }
+  .quiz-toolbar { margin: 2px 0 4px; padding: 6px 7px; border-radius: 11px; font-size: 24px; }
+  .question-card { margin: 4px 0; padding: 6px 5px; border-radius: 12px; }
+  .question-card h2 { margin-bottom: 7px; font-size: 32px; line-height: 1.38; }
+  .option { min-height: 58px; padding: 8px 7px; border-radius: 10px; font-size: 27px; line-height: 1.38; }
+  .option + .option { margin-top: 5px; }
+  .option input { margin: 3px 7px 0 0; transform: scale(1.05); }
+  .answer-note { margin: 5px 0; font-size: 24px; line-height: 1.35; }
+  .question-nav-slot button { min-width: 0; margin-bottom: 2px; padding: 7px 12px; font-size: 24px; }
+  .actions { gap: 5px; margin: 6px 0; }
+  .actions button { width: 100%; padding: 7px 12px; font-size: 24px; }
 }
