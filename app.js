@@ -162,7 +162,8 @@
 
   function setupLineBrowserPrompt() {
     const ua = navigator.userAgent || '';
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+    const isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isMobile = /Android/i.test(ua) || isIOS;
     const isLine = /Line\//i.test(ua);
     const prompt = $('browser-prompt');
     if (!prompt || !isMobile || !isLine || sessionStorage.getItem('daily-water-browser-prompt-seen')) return;
@@ -174,7 +175,7 @@
       const target = `${current.host}${current.pathname}${current.search}${current.hash}`;
       if (/Android/i.test(ua)) {
         window.location.href = `intent://${target}#Intent;scheme=https;end`;
-      } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      } else if (isIOS) {
         window.location.href = `x-safari-https://${target}`;
       } else {
         window.open(window.location.href, '_blank', 'noopener');
