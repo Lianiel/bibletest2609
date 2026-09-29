@@ -74,7 +74,9 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .feedback-label { color: #d97706; }
 .feedback-answer { color: #087f5b; }
 .feedback-correct { color: #087f5b; }
-.question-nav-slot { display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; min-height: 0; }
+.question-inline-nav { display: inline-block; margin-left: 12px; vertical-align: middle; white-space: nowrap; }
+.question-inline-nav button { min-width: 120px; margin: 0; padding: 8px 18px; box-shadow: 0 8px 18px rgba(124, 58, 237, .20); vertical-align: middle; }
+.question-nav-slot { display: flex; align-items: center; justify-content: flex-end; width: 100%; min-height: 0; }
 .question-nav-slot button { min-width: 180px; margin: 0 0 4px; box-shadow: 0 8px 18px rgba(124, 58, 237, .20); }
 .question-nav-slot #next-button, .question-nav-slot #submit-button { min-width: 120px; padding-left: 18px; padding-right: 18px; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
@@ -123,6 +125,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   .score-correct strong, .score-wrong strong { font-size: 32px; }
   .question-card { margin: 5px 0; padding: 7px 6px; border-radius: 12px; }
   .question-card h2 { margin-bottom: 7px; font-size: 32px; line-height: 1.38; }
+  .question-inline-nav { margin-left: 8px; }
+  .question-inline-nav button { min-width: 110px; padding: 7px 14px; font-size: 24px; }
   .option { min-height: 64px; padding: 10px 7px; border-radius: 10px; font-size: 27px; line-height: 1.38; }
   .option + .option { margin-top: 2px; }
   .option input { margin: 3px 7px 0 0; transform: scale(1.05); }
