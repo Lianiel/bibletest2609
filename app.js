@@ -63,7 +63,6 @@
     $('submit-button').disabled = false;
     $('previous-button').classList.remove('hidden');
     $('next-button').classList.remove('hidden');
-    $('score-label').textContent = '尚未交卷';
     submitted = false;
     currentIndex = 0;
     answers = {};
@@ -104,11 +103,12 @@
         }
       });
     });
-    $('progress-label').textContent = `第${currentIndex + 1}題／共${TEST_SIZE}題`;
+    $('progress-label').textContent = `${currentIndex + 1} / ${TEST_SIZE}`;
     const answered = currentTest.filter((item) => Object.prototype.hasOwnProperty.call(answers, item.id));
     const correctCount = answered.filter((item) => answers[item.id] === item.answer).length;
     const wrongCount = answered.length - correctCount;
-    $('score-label').textContent = submitted ? `得分 ${correctCount}/${TEST_SIZE}` : `答對 ${correctCount}｜答錯 ${wrongCount}`;
+    $('correct-count').textContent = correctCount;
+    $('wrong-count').textContent = wrongCount;
     $('previous-button').disabled = currentIndex === 0;
     $('next-button').textContent = '下一題 →';
     $('next-button').classList.toggle('hidden', currentIndex === TEST_SIZE - 1 || !hasAnswer);
@@ -138,7 +138,6 @@
     const lastRun = state.runs[state.runs.length - 1];
     if (lastRun) lastRun.score = score;
     writeState(state);
-    $('score-label').textContent = `得分 ${score}/${TEST_SIZE}`;
     $('submit-button').disabled = true;
     $('submit-button').classList.add('hidden');
     $('next-button').classList.toggle('hidden', currentIndex === TEST_SIZE - 1);
