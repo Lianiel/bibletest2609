@@ -63,14 +63,16 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   #quiz-form .option + .option { margin-top: 0; }
 }
 @media (max-width: 620px) {
-  .app-shell { padding: 10px 10px 44px; }
-  .hero { padding: 22px 4px 18px; }
-  .hero p:last-child { font-size: 15px; }
+  .app-shell { padding: 4px 8px 34px; }
+  .hero { padding: 12px 4px 5px; }
+  .eyebrow { font-size: 19px; margin-bottom: 5px; }
+  h1 { font-size: clamp(34px, 8vw, 44px); line-height: 1.12; }
   .panel { padding: 16px; }
   .stats strong { font-size: 23px; }
-  .quiz-toolbar { padding: 13px 14px; font-size: 14px; }
+  .quiz-toolbar { margin-top: 4px; padding: 13px 14px; font-size: 16px; }
   .question-card { padding: 18px 14px; border-radius: 20px; }
-  .question-card h2 { font-size: 21px; }
-  .option { min-height: 62px; padding: 15px 13px; font-size: 17px; }
+  .question-card h2 { margin-bottom: 17px; font-size: 24px; line-height: 1.48; }
+  .option { min-height: 66px; padding: 16px 13px; font-size: 19px; line-height: 1.52; }
+  .answer-note { font-size: 16px; }
   .actions button { width: 100%; }
 }
