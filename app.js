@@ -86,7 +86,7 @@
     }).join('');
     const correct = hasAnswer && selectedAnswer === q.answer;
     const feedback = hasAnswer
-      ? `<p class="answer-note">${correct ? '<span class="feedback-correct">答對</span>' : `<span class="feedback-wrong">答錯</span><span class="feedback-label">；正確答案：</span><span class="feedback-answer">${q.answer} ${q.options[q.answer.charCodeAt(0) - 65]}</span>`}</p>`
+      ? `<p class="answer-note">${correct ? '<span class="feedback-correct">答對</span>' : `<span class="feedback-wrong">答錯</span><span class="feedback-answer-row"><span class="feedback-label">正確答案：</span><span class="feedback-answer">${q.answer} ${q.options[q.answer.charCodeAt(0) - 65]}</span></span>`}</p>`
       : '';
     // Keep feedback and navigation immediately above the answer choices, matching
     // the established mobile quiz layout.

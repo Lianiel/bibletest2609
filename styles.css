@@ -66,7 +66,8 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .option.answer-muted:hover { background: #fafafa; border-color: #eeeaf4; }
 .question-card.correct { border-color: #75c798; background: #f2fff6; }
 .question-card.incorrect { border-color: #e99b9b; background: #fff6f6; }
-.answer-note { margin: 0; color: #4b5563; font-size: 24px; font-weight: 800; line-height: 1.3; text-align: right; }
+.answer-note { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; margin: 0; color: #4b5563; font-size: 24px; font-weight: 800; line-height: 1.3; text-align: right; }
+.feedback-answer-row { display: inline-flex; gap: 6px; align-items: baseline; }
 .question-card.correct .answer-note { color: #087f5b; }
 .question-card.incorrect .answer-note { color: #c62828; }
 .feedback-wrong { color: #c62828; }
