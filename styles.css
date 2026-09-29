@@ -47,6 +47,12 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 #next-button, #submit-button { min-width: 180px; box-shadow: 0 8px 18px rgba(124, 58, 237, .20); }
 #previous-button { display: none; }
 .hidden { display: none !important; }
+.browser-prompt { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: rgba(36, 25, 61, .46); }
+.browser-prompt-card { width: min(420px, 100%); padding: 26px; border: 1px solid #e7def5; border-radius: 24px; background: #fff; box-shadow: 0 20px 60px rgba(36, 25, 61, .25); }
+.browser-prompt-card h2 { margin: 0 0 10px; color: #3b235e; font-size: 24px; }
+.browser-prompt-card p { margin: 0; color: #625774; line-height: 1.7; }
+.browser-prompt-actions { display: grid; gap: 10px; margin-top: 22px; }
+.browser-prompt-actions button { width: 100%; }
 #result-panel { margin-top: 18px; }
 #result-details { display: grid; gap: 8px; color: #5b5368; }
 .result-item { padding: 10px 12px; border-radius: 10px; background: #faf8ff; font-size: 14px; line-height: 1.55; }

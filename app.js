@@ -158,10 +158,37 @@
     $('status-message').textContent = state.runs.length ? `已完成 ${state.runs.length} 次測驗；下一次會優先抽取本輪尚未出現的題目。` : '尚未有測驗紀錄。';
   }
 
+  function setupLineBrowserPrompt() {
+    const ua = navigator.userAgent || '';
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+    const isLine = /Line\//i.test(ua);
+    const prompt = $('browser-prompt');
+    if (!prompt || !isMobile || !isLine || sessionStorage.getItem('daily-water-browser-prompt-seen')) return;
+
+    prompt.classList.remove('hidden');
+    $('stay-in-line').addEventListener('click', () => {
+      sessionStorage.setItem('daily-water-browser-prompt-seen', '1');
+      prompt.classList.add('hidden');
+    });
+    $('open-default-browser').addEventListener('click', () => {
+      sessionStorage.setItem('daily-water-browser-prompt-seen', '1');
+      const current = new URL(window.location.href);
+      const target = `${current.host}${current.pathname}${current.search}${current.hash}`;
+      if (/Android/i.test(ua)) {
+        window.location.href = `intent://${target}#Intent;scheme=https;end`;
+      } else if (/iPhone|iPad|iPod/i.test(ua)) {
+        window.location.href = `x-safari-https://${target}`;
+      } else {
+        window.open(window.location.href, '_blank', 'noopener');
+      }
+    });
+  }
+
   $('start-button').addEventListener('click', () => { currentTest = chooseQuestions(); renderTest(); });
   $('submit-button').addEventListener('click', submitTest);
   $('previous-button').addEventListener('click', () => { if (currentIndex > 0) { currentIndex -= 1; renderQuestion(); } });
   $('next-button').addEventListener('click', () => { if (currentIndex < TEST_SIZE - 1) { currentIndex += 1; renderQuestion(); } });
   $('new-test-button').addEventListener('click', () => { currentTest = chooseQuestions(); refreshStats(); renderTest(); });
   refreshStats();
+  setupLineBrowserPrompt();
 })();
