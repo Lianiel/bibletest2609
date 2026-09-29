@@ -91,12 +91,13 @@
     $('actions').appendChild($('next-button'));
     $('actions').appendChild($('submit-button'));
     document.querySelector('.quiz-toolbar').appendChild($('score-block'));
-    form.innerHTML = `<article class="question-card ${hasAnswer ? (isCorrect ? 'correct' : 'incorrect') : ''}" data-question-id="${q.id}"><h2>${currentIndex + 1}. ${q.question}</h2>${feedback}<div class="question-nav-slot"></div>${options}</article>`;
+    form.innerHTML = `<article class="question-card ${hasAnswer ? (isCorrect ? 'correct' : 'incorrect') : ''}" data-question-id="${q.id}"><h2>${currentIndex + 1}. ${q.question}</h2><div class="question-nav-slot"></div>${options}</article>`;
     const questionCard = form.querySelector('.question-card');
     const questionNavSlot = questionCard.querySelector('.question-nav-slot');
     if (hasAnswer && !submitted) {
       questionNavSlot.appendChild(currentIndex < TEST_SIZE - 1 ? $('next-button') : $('submit-button'));
     }
+    if (hasAnswer) questionNavSlot.insertAdjacentHTML('beforeend', feedback);
     form.querySelectorAll('input').forEach((input) => {
       input.addEventListener('change', () => {
         if (!Object.prototype.hasOwnProperty.call(answers, q.id)) {
