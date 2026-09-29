@@ -96,7 +96,6 @@
     const questionNavSlot = questionCard.querySelector('.question-nav-slot');
     if (hasAnswer && !submitted) {
       questionNavSlot.appendChild(currentIndex < TEST_SIZE - 1 ? $('next-button') : $('submit-button'));
-      questionNavSlot.appendChild($('score-block'));
     }
     form.querySelectorAll('input').forEach((input) => {
       input.addEventListener('change', () => {
