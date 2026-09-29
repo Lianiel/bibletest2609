@@ -168,10 +168,6 @@
     if (!prompt || !isMobile || !isLine || sessionStorage.getItem('daily-water-browser-prompt-seen')) return;
 
     prompt.classList.remove('hidden');
-    $('stay-in-line').addEventListener('click', () => {
-      sessionStorage.setItem('daily-water-browser-prompt-seen', '1');
-      prompt.classList.add('hidden');
-    });
     $('open-default-browser').addEventListener('click', () => {
       sessionStorage.setItem('daily-water-browser-prompt-seen', '1');
       const current = new URL(window.location.href);
