@@ -155,7 +155,6 @@
     const state = readState();
     $('bank-count').textContent = BANK_SIZE;
     $('used-count').textContent = state.usedIds.length;
-    $('status-message').textContent = state.runs.length ? `已完成 ${state.runs.length} 次測驗；下一次會優先抽取本輪尚未出現的題目。` : '尚未有測驗紀錄。';
   }
 
   function setupLineBrowserPrompt() {
