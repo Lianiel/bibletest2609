@@ -13,6 +13,7 @@ body::before { content: ""; position: fixed; inset: 0; pointer-events: none; opa
 .eyebrow { margin: 0 0 8px; color: #e9ddff; font-weight: 800; letter-spacing: .08em; }
 h1 { margin: 0; font-size: clamp(28px, 6vw, 46px); line-height: 1.2; }
 .month-title, .range-title { display: block; }
+.month-title { font-size: calc(clamp(28px, 6vw, 46px) - 8px); }
 .range-title { font-size: calc(clamp(28px, 6vw, 46px) - 8px); }
 .hero p:last-child { margin: 14px 0 0; color: #665d75; font-size: 17px; line-height: 1.7; }
 .panel, .question-card { background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(244,239,255,.92)); border: 1px solid #d1c0f2; border-radius: 24px; box-shadow: 0 14px 36px rgba(80, 54, 120, .18); }
@@ -105,6 +106,7 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   .eyebrow { font-size: 27px; line-height: 1.2; margin-bottom: 2px; }
   h1 { font-size: clamp(32px, 8vw, 42px); line-height: 1.08; }
   .month-title, .range-title { display: block; }
+  .month-title { font-size: calc(clamp(32px, 8vw, 42px) - 8px); }
   .range-title { font-size: calc(clamp(32px, 8vw, 42px) - 8px); }
   .panel { padding: 6px; border-radius: 14px; }
   #start-panel { gap: 12px; min-height: 142px; padding: 16px 10px; border-radius: 16px; }
