@@ -104,6 +104,7 @@ button:disabled { cursor: not-allowed; opacity: .55; }
   .hero { padding: 15px 12px 13px; border-radius: 17px; }
   .eyebrow { font-size: 27px; line-height: 1.2; margin-bottom: 2px; }
   h1 { font-size: clamp(32px, 8vw, 42px); line-height: 1.08; }
+  .month-title, .range-title { display: block; }
   .range-title { font-size: calc(clamp(32px, 8vw, 42px) - 8px); }
   .panel { padding: 6px; border-radius: 14px; }
   #start-panel { gap: 12px; min-height: 142px; padding: 16px 10px; border-radius: 16px; }
